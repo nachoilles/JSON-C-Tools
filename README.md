@@ -34,7 +34,7 @@ cd .\test\
 1. Parsing a JSON string
 
 This example shows how to parse a JSON string into a JsonValue tree and access object fields using the library.
-
+```
 int main() {
     const char* input = "{\"name\":\"john\",\"age\":30,\"admin\":true}";
 
@@ -54,11 +54,11 @@ int main() {
     json_free(value);
     return 0;
 }
-
+```
 2. Building and stringifying JSON
 
 This example demonstrates how to manually construct a JSON object and convert it back into a JSON string.
-
+```
 int main() {
     JsonValue* obj = json_object();
 
@@ -82,3 +82,4 @@ int main() {
 
     return 0;
 }
+```

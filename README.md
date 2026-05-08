@@ -35,9 +35,6 @@ cd .\test\
 
 This example shows how to parse a JSON string into a JsonValue tree and access object fields using the library.
 
-#include "json.h"
-#include <stdio.h>
-
 int main() {
     const char* input = "{\"name\":\"john\",\"age\":30,\"admin\":true}";
 
@@ -61,10 +58,6 @@ int main() {
 2. Building and stringifying JSON
 
 This example demonstrates how to manually construct a JSON object and convert it back into a JSON string.
-
-#include "json.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int main() {
     JsonValue* obj = json_object();

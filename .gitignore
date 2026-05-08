@@ -1,0 +1,55 @@
+# =========================
+# Build output (CMake / GCC)
+# =========================
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# =========================
+# Executables
+# =========================
+*.exe
+*.out
+*.app
+
+# =========================
+# Object files / libraries
+# =========================
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.dll.a
+
+# =========================
+# Debug / runtime files
+# =========================
+*.pdb
+*.ilk
+
+# =========================
+# IDEs / editors
+# =========================
+.vscode/
+.idea/
+*.code-workspace
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs / temp
+# =========================
+*.log
+*.tmp

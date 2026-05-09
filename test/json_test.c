@@ -646,6 +646,10 @@ static void test_parse_from_file() {
 
   ASSERT_TRUE(file_data != NULL, "unexpected NULL");
 
+  json_free(file_data);
+
+  SUCCESS(TEST_NAME);
+
   #undef TEST_NAME
 }
 
@@ -656,6 +660,7 @@ int main() {
   test_array();
   test_object();
   test_parse();
+  test_parse_from_file();
   
   printf("\n[json_test] \033[38;5;156mALL TEST PASSED\x1b[37m\n\n");
   return 0;

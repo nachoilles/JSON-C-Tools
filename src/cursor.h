@@ -8,7 +8,7 @@
 // Forward declaration. Definition in tokenizer.h
 typedef struct Token Token;
 
-typedef struct {
+typedef struct Cursor {
   Token** p_tokens;
   size_t count;
   size_t pos;

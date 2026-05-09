@@ -1,7 +1,6 @@
 # =========================
 # Build output (CMake / GCC)
 # =========================
-build/
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt

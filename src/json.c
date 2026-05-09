@@ -1,9 +1,10 @@
+#include "../include/json.h"
+
 #include "globals.h"
 #include "table.h"
 #include "cursor.h"
 #include "tokenizer.h"
 
-#include "../include/json.h"
 
 
 static int table[NT_COUNT][T_COUNT];

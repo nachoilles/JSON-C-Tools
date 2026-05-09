@@ -1,5 +1,12 @@
+#include "globals.h"
+#include "table.h"
+#include "cursor.h"
+#include "tokenizer.h"
+
 #include "../include/json.h"
 
+
+static int table[NT_COUNT][T_COUNT];
 
 void json_set_debug(int enabled) {
   json_debug_enabled = enabled;
@@ -16,7 +23,6 @@ char* get_json_type_name(JsonType type) {
     default: return "UNKNOWN TYPE";
   }
 }
-
 
 JsonValue* json_null(void) {
   JsonValue* val = malloc(sizeof(JsonValue));

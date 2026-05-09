@@ -6,11 +6,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-#include "..\src\globals.h"
-#include "..\src\table.h"
-#include "..\src\cursor.h"
-#include "..\src\tokenizer.h"
-
 
 static int json_debug_enabled = 0;
 
@@ -82,8 +77,8 @@ static void indent(char** p_buf, size_t* p_len, size_t* p_cap, int depth);
 static void json_stringify_recursive(JsonValue* p_value, char** p_buf, size_t* p_len, size_t* p_cap, bool pretty, int depth);
 char* json_stringify(JsonValue* p_value, bool pretty);
 
-// Forward declaration. Implemented in table.h
-static int table[NT_COUNT][T_COUNT];
+// Forward declaration. Implemented in cursor.h
+typedef struct Cursor Cursor;
 
 static JsonValue* parse_value(Cursor* p_c);
 static JsonValue* parse_array(Cursor* p_c);

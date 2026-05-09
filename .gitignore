@@ -24,10 +24,7 @@ compile_commands.json
 # =========================
 *.o
 *.obj
-*.a
 *.lib
-*.dll
-*.dll.a
 
 # =========================
 # Debug / runtime files

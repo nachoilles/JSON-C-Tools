@@ -539,3 +539,33 @@ JsonValue* json_parse(const char* str) {
 
   return root;
 }
+
+JsonValue* json_parse_from_file(const char* path) {
+  FILE* file = fopen(path, "rb");
+  if (!file) {
+    fprintf(stderr, "File %s doesn't exist or don't have permission", path);
+    return NULL;
+  }
+
+  fseek(file, 0, SEEK_END);
+  long size = ftell(file);
+  rewind(file);
+
+  char* buffer = (char*)malloc(size + 1);
+  if (!buffer) {
+    fprintf(stderr, "Error allocating read buffer");
+    fclose(file);
+    return NULL;
+  }
+
+  fread(buffer, 1, size, file);
+  buffer[size] = '\0';
+
+  fclose(file);
+
+  JsonValue* result = json_parse(buffer);
+
+  free(buffer);
+
+  return result;
+}

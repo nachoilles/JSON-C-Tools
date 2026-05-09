@@ -84,5 +84,6 @@ static JsonValue* parse_value(Cursor* p_c);
 static JsonValue* parse_array(Cursor* p_c);
 static JsonValue* parse_object(Cursor* p_c);
 JsonValue* json_parse(const char* str);
+JsonValue* json_parse_from_file(const char* path);
 
 #endif //JSON

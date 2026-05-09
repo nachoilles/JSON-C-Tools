@@ -7,7 +7,7 @@
 #include <stdbool.h>
 
 
-static int json_debug_enabled = 0;
+int json_debug_enabled = 0;
 
 typedef enum {
   JSON_NULL,

@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include "..\src\tokenizer.h"
-#include "..\src\cursor.h"
 #include "..\include\json.h"
 
 
@@ -636,6 +634,17 @@ static void test_parse() {
     "expected trailing comma object parse to fail");
 
   SUCCESS(TEST_NAME);
+
+  #undef TEST_NAME
+}
+
+static void test_parse_from_file() {
+  #define TEST_NAME "test_parse_from_file"
+  JsonValue* file_data = json_parse_from_file("test.json");
+
+  char msg[256];
+
+  ASSERT_TRUE(file_data != NULL, "unexpected NULL");
 
   #undef TEST_NAME
 }

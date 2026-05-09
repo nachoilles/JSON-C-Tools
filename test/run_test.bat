@@ -17,7 +17,6 @@ echo   run_tests.bat
 exit /b 1
 
 :tokenizer
-echo Running tokenizer tests...
 gcc tokenizer_test.c ..\src\tokenizer.c -o test.exe
 if errorlevel 1 exit /b 1
 
@@ -26,7 +25,6 @@ del .\test.exe
 exit /b 0
 
 :cursor
-echo Running cursor tests...
 gcc cursor_test.c ..\src\tokenizer.c ..\src\cursor.c -o test.exe
 if errorlevel 1 exit /b 1
 
@@ -35,7 +33,6 @@ del .\test.exe
 exit /b 0
 
 :json
-echo Running json tests...
 gcc json_test.c ..\src\tokenizer.c ..\src\cursor.c ..\src\json.c ..\src\table.c -o test.exe
 if errorlevel 1 exit /b 1
 
